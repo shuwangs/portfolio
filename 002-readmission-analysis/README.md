@@ -48,3 +48,8 @@ The dataset contains **25,000 hospital visit records** with the following key co
 ├── readmission-analysis.py # (Optional) Refactored logic in .py format
 ├── README.md # You're here!
 
+
+![Python](https://img.shields.io/badge/Python-3.9-blue.svg)
+![Platform](https://img.shields.io/badge/Platform-Jupyter%20%7C%20CLI-informational)
+![Status](https://img.shields.io/badge/Status-Completed-brightgreen)
+
