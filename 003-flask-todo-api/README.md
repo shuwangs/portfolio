@@ -53,6 +53,86 @@ Then visit [http://127.0.0.1:5000](http://127.0.0.1:5000) in your browser.
 
 ---
 
+## 🧪 API Endpoints
+
+### ➕ Add a new task
+
+`POST /add`  
+**Request Body:**
+
+```json
+{
+  "task": "Walk the cat"
+}
+```
+
+**Response:**
+
+```json
+{
+  "message": "Task added!",
+  "task": {
+    "id": 1,
+    "task": "Walk the cat"
+  }
+}
+```
+
+---
+
+### 📋 Get all tasks
+
+`GET /tasks`  
+**Response:**
+
+```json
+{
+  "tasks": [
+    {"id": 1, "task": "Walk the cat"},
+    {"id": 2, "task": "Buy milk"}
+  ]
+}
+```
+
+---
+
+### 🔍 Get task by ID
+
+`GET /tasks/<id>`  
+**Response:**
+
+```json
+{
+  "task": {
+    "id": 1,
+    "task": "Walk the cat"
+  }
+}
+```
+
+---
+
+### ❌ Delete task by ID
+
+`DELETE /tasks/<id>`  
+**Response (success):**
+
+```json
+{
+  "message": "Task 1 deleted."
+}
+```
+
+**Response (if not found):**
+
+```json
+{
+  "error": "Task not found"
+}
+```
+
+---
+
 ## 🎯 Learning Goals
 - Understand the basics of web APIs and HTTP methods (GET, POST, DELETE)
 

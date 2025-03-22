@@ -41,6 +41,20 @@ def get_task_by_id(task_id):
             return jsonify({"task": task}), 200
     return jsonify({"error": "Task not found"}), 404
 
+
+@app.route("/tasks/<int:task_id>", methods=['DELETE'])
+def delete_task(task_id):
+    global todos
+
+    for task in todos:
+        if task['id'] == task_id:
+            todos.remove(task)
+            return jsonify({"message": "Task deleted successfully!"}), 200
+
+    # If the task is not found, return an error message
+    return jsonify({"message": "Task was not found!"}), 404
+
+
 if __name__ == '__main__':
     app.run(debug=True)
 
