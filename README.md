@@ -29,7 +29,7 @@ This repo is meant to:
 - Serve as a central place for my GitHub portfolio
 
 If you’re a recruiter or collaborator:  
-📬 Feel free to check out individual folders or reach out via [swang3130@gatech.edu or LinkedIn()].
+📬 Feel free to check out individual folders or reach out via [swang3130@gatech.edu](swang3130@gatech.edu) or [LinkedIn](https://www.linkedin.com/in/shuuwang/).
 
 ---
 
@@ -44,5 +44,5 @@ If you’re a recruiter or collaborator:
 
 ## ✨ Contact
 
-Made with 💛 by [Your Name]  
-🔗 [LinkedIn](https://linkedin.com/in/your-profile) | [GitHub](https://github.com/your-profile)
+Made with 💛 by Shu Wang 
+🔗 [LinkedIn](https://www.linkedin.com/in/shuuwang/) | [GitHub]([https://github.com/your-profile](https://github.com/shuwangs)
