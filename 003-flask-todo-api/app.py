@@ -47,7 +47,7 @@ def get_tasks():
         rows = cursor.fetchall()
 
     tasks = [{"id":row[0], "task": row[1]} for row in rows]
-    return jsonify({"tasks": todos}), 200
+    return jsonify({"tasks": tasks}), 200
 
 
 @app.route("/tasks/<int:task_id>", methods=['GET'])
@@ -76,5 +76,6 @@ def delete_task(task_id):
 
 
 if __name__ == '__main__':
+    init_db()
     app.run(debug=True)
 
