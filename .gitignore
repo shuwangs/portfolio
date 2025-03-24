@@ -13,3 +13,8 @@ __pycache__/
 
 # Environment files
 .env
+003-flask-todo-api/.idea/misc.xml
+003-flask-todo-api/.idea/inspectionProfiles/profiles_settings.xml
+003-flask-todo-api/.idea/003-flask-todo-api.iml
+003-flask-todo-api/.idea/vcs.xml
+003-flask-todo-api/.idea/modules.xml
