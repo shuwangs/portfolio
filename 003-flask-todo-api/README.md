@@ -10,7 +10,7 @@ It was built as part of my transition to Software Development, to learn how back
 - ✅ Add new tasks
 - 📋 View all tasks
 - ❌ Delete tasks
-- 🖥️ Simple in-memory storage (or SQLite in later version)
+- 💾 SQLite Integration
 - 🧱 Modular project structure
 
 ---
@@ -55,80 +55,34 @@ Then visit [http://127.0.0.1:5000](http://127.0.0.1:5000) in your browser.
 
 ## 🧪 API Endpoints
 
-### ➕ Add a new task
+## ✅ Why this matters:
 
-`POST /add`  
-**Request Body:**
+- Tasks are stored in a real `.db` file (`todo.db`)
+- Data won't disappear after the server restarts
+- You can perform real SQL queries and build upon this foundation
 
-```json
-{
-  "task": "Walk the cat"
-}
+### 🧱 Database Schema
+
+```sql
+CREATE TABLE IF NOT EXISTS tasks (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    task TEXT NOT NULL
+);
 ```
 
-**Response:**
+This table is automatically created when you run the app.
 
-```json
-{
-  "message": "Task added!",
-  "task": {
-    "id": 1,
-    "task": "Walk the cat"
-  }
-}
-```
+### 🧪 Where is it used?
 
----
+All API operations (`/add`, `/tasks`, `/tasks/<id>`, `DELETE`) now interact directly with the SQLite database using the built-in `sqlite3` Python module.
 
-### 📋 Get all tasks
+### 🛡️ Note for GitHub
 
-`GET /tasks`  
-**Response:**
+Make sure to **exclude `todo.db`** from your repository using `.gitignore`:
 
-```json
-{
-  "tasks": [
-    {"id": 1, "task": "Walk the cat"},
-    {"id": 2, "task": "Buy milk"}
-  ]
-}
-```
-
----
-
-### 🔍 Get task by ID
-
-`GET /tasks/<id>`  
-**Response:**
-
-```json
-{
-  "task": {
-    "id": 1,
-    "task": "Walk the cat"
-  }
-}
-```
-
----
-
-### ❌ Delete task by ID
-
-`DELETE /tasks/<id>`  
-**Response (success):**
-
-```json
-{
-  "message": "Task 1 deleted."
-}
-```
-
-**Response (if not found):**
-
-```json
-{
-  "error": "Task not found"
-}
+```txt
+# .gitignore
+todo.db
 ```
 
 ---
