@@ -1,15 +1,16 @@
 # 📝 Flask Todo API
 
 This is a beginner-friendly Flask API project that provides basic task management (Todo) functionality.  
-It was built as part of my transition to Software Development, to learn how backend services and APIs work.
+It was built as part of my transition to Software Development, to learn how backend services and REST APIs work.
 
 ---
 
 ## 🔧 Features
 
-- ✅ Add new tasks
-- 📋 View all tasks
-- ❌ Delete tasks
+- ✅ Add new tasks (POST)
+- 📋 View all tasks (GET)
+- 🔍 View a task by ID (GET)
+- ❌ Delete tasks (DELETE)
 - 💾 SQLite Integration
 - 🧱 Modular project structure
 
@@ -17,33 +18,38 @@ It was built as part of my transition to Software Development, to learn how back
 
 ## 🚀 How to Run
 
-1. Clone the repo:
+1. **Clone the repo:**
 
 ```bash
 git clone https://github.com/shuwangs/portfolio.git
 cd portfolio/003-flask-todo-api
 ```
 
----
-2. (Optional) Create a virtual environment:
+2. **(Optional) Create a virtual environment:**
+
 ```bash
 python3 -m venv venv
-source venv/bin/activate   # On Windows: venv\Scripts\activate
+source venv/bin/activate  # On Windows: venv\Scripts\activate
 ```
 
-3. Install dependencies:
+3. **Install dependencies:**
+
 ```bash
 pip install -r requirements.txt
 ```
-4. Run the app:
+
+4. **Run the app:**
+
 ```bash
 python app.py
 ```
-Then visit [http://127.0.0.1:5000](http://127.0.0.1:5000) in your browser.
+
+Then open [http://127.0.0.1:5000](http://127.0.0.1:5000) in your browser.
 
 ---
 
-##  🗂️ Project Structure
+## 🗂️ Project Structure
+
 ```
 003-flask-todo-api/
 ├── app.py
@@ -55,11 +61,33 @@ Then visit [http://127.0.0.1:5000](http://127.0.0.1:5000) in your browser.
 
 ## 🧪 API Endpoints
 
-## ✅ Why this matters:
+### ➕ Add a new task  
+`POST /add`  
+Request body:
+```json
+{
+  "task": "Walk the cat"
+}
+```
+
+### 📋 Get all tasks  
+`GET /tasks`
+
+### 🔍 Get task by ID  
+`GET /tasks/<id>`
+
+### ❌ Delete task by ID  
+`DELETE /tasks/<id>`
+
+---
+
+## 💾 SQLite Integration
+
+### ✅ Why this matters
 
 - Tasks are stored in a real `.db` file (`todo.db`)
-- Data won't disappear after the server restarts
-- You can perform real SQL queries and build upon this foundation
+- Data persists between server restarts
+- You can use real SQL queries to access/modify your data
 
 ### 🧱 Database Schema
 
@@ -70,15 +98,15 @@ CREATE TABLE IF NOT EXISTS tasks (
 );
 ```
 
-This table is automatically created when you run the app.
+This table is automatically created when the app runs.
 
-### 🧪 Where is it used?
+### 🧪 Used In
 
-All API operations (`/add`, `/tasks`, `/tasks/<id>`, `DELETE`) now interact directly with the SQLite database using the built-in `sqlite3` Python module.
+All API endpoints (`/add`, `/tasks`, `/tasks/<id>`, `DELETE`) interact directly with SQLite using the `sqlite3` Python module.
 
-### 🛡️ Note for GitHub
+### 🛡️ GitHub Tip
 
-Make sure to **exclude `todo.db`** from your repository using `.gitignore`:
+Be sure to exclude `todo.db` from your repo:
 
 ```txt
 # .gitignore
@@ -88,25 +116,22 @@ todo.db
 ---
 
 ## 🎯 Learning Goals
+
 - Understand the basics of web APIs and HTTP methods (GET, POST, DELETE)
-
-- Get hands-on with Flask routing and request handling
-
-- Learn to organize Python projects in an SDE-friendly way
+- Practice Flask routing, request handling, and JSON response
+- Organize backend projects in a professional, scalable way
+- Apply persistent storage using SQLite
 
 ---
 
 ## 👩‍💻 Built With
+
 - Python
 - Flask
 
 ---
 
-✨ About Me
-I'm Shu Wang — a bioinformatics scientist and machine learning enthusiast, transitioning into a Software Development Engineer role.
-This project is part of my  [GitHub Portfolio](https://github.com/shuwangs/portfolio).
+## ✨ About Me
 
-🐱 **Fun fact**: My cat Bobo was sitting next to me while I built this!
-
----
-
+I'm **Shu Wang** — a bioinformatics scientist and machine learning enthusiast, transitioning into a Software Development Engineer role.  
+This project is part of my [GitHub Portfolio](https://github.com/shuwangs/portfolio).
