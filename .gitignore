@@ -13,3 +13,4 @@ __pycache__/
 
 # Environment files
 .env
+/003-flask-todo-api/.idea
