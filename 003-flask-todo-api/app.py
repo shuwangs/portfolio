@@ -1,5 +1,5 @@
 from flask import Flask, request, jsonify
-import sqlite3
+# import sqlite3
 import os
 
 user_prompt = "Enter a todo: "
@@ -9,14 +9,20 @@ while 1:
     user_action = user_action.strip()
     match user_action:
         case 'add':
-            todo = input(user_prompt)  
+            todo = input(user_prompt)
             todos.append(todo)
 
         case 'show':
-            for item in todos:
-                item = item.title()
-                print(item)
-
+            for index, item in enumerate(todos):
+                print(f"{index + 1}-{item}")
+        case 'edit':
+            number = int(input("Number of the todo to edit: "))
+            number -= 1
+            new_todo = input("Enter new todo: ")
+            todo[number] = new_todo
+        case 'complete':
+            number = int(input("Number of the todo to complete:"))
+            todos.pop(number-1)
         case 'exit':
             break
         case _:
@@ -57,7 +63,7 @@ while 1:
 #         cursor.execute("INSERT INTO tasks(task) VALUES (?)", (task_content,))
 #         task_id = cursor.lastrowid
 #         conn.commit()
-    
+
 #     return jsonify({"message": "Task added successfully!", "task": {"id": task_id, "task":task_content}}), 201
 
 # @app.route("/tasks", methods = ['GET'])
@@ -93,7 +99,7 @@ while 1:
 #             return jsonify({"message": f"Task {task_id} deleted."}), 200
 #         else:
 #             return jsonify({"message": "Task not found!"}), 404
-    
+
 
 
 # if __name__ == '__main__':
