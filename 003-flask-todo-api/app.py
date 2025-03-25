@@ -5,32 +5,27 @@ import os
 user_prompt = "Enter a todo: "
 
 while 1:
-    user_action = input("Type add, show or exit:")
+    user_action = input("Type add, show, edit, delete or exit:")
     user_action = user_action.strip()
     match user_action:
         case 'add':
             todo = input(user_prompt) + "\n"      
-            # Open the existing todo file      
-            file = open("todo.txt", 'r')
-            # read the existing file as todo list
-            todos = file.readlines()
-            file.close()
-            
+
+            with open('todo.txt', "r") as file:
+                todos = file.readlines()
+
             # Append the newly added todo
             todos.append(todo)
 
             # Open the file again to overwrite with the new todos
-            file = open("todo.txt", 'w')
-            file.writelines(todos)
-            file.close()
+            with open('todo.txt', "w") as file:
+                file.writelines(todos)
+
+    
 
         case 'show':
-            file = open("todo.txt", "r")
-            todos = file.readlines()
-            file.close()
-
-            # remove 
-            # new_todos = [item.strip("\n") for item in todos]
+            with open('todo.txt', "r") as file:
+                todos = file.readlines()
             
             for index, item in enumerate(todos):
                 item = item.strip("\n")
@@ -40,11 +35,30 @@ while 1:
         case 'edit':
             number = int(input("Number of the todo to edit: "))
             number -= 1
+            with open('todo.txt', "r") as file:
+                todos = file.readlines()
+            print("Here is the todos existing.", todos)
+            
             new_todo = input("Enter new todo: ")
-            todo[number] = new_todo
-        case 'complete':
+            todos[number] = new_todo + "\n" # Add '\n' to be consistent with rest W
+
+            with open('todo.txt', "w") as file:
+                file.writelines(todos)
+
+        case 'delete':
             number = int(input("Number of the todo to complete:"))
-            todos.pop(number-1)
+
+            with open("todo.txt", "r") as file:
+                todos = file.readlines()
+
+            rm_todo = todos.pop(number-1)
+            
+            with open("todo.txt", "w") as file:
+                file.writelines(todos)
+            
+            message = f"Todo: {rm_todo} was removed from the list"
+            print(message)
+
         case 'exit':
             break
         case _:
