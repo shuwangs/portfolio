@@ -3,18 +3,40 @@ from flask import Flask, request, jsonify
 import os
 
 user_prompt = "Enter a todo: "
-todos = []
+
 while 1:
     user_action = input("Type add, show or exit:")
     user_action = user_action.strip()
     match user_action:
         case 'add':
-            todo = input(user_prompt)
+            todo = input(user_prompt) + "\n"      
+            # Open the existing todo file      
+            file = open("todo.txt", 'r')
+            # read the existing file as todo list
+            todos = file.readlines()
+            file.close()
+            
+            # Append the newly added todo
             todos.append(todo)
 
+            # Open the file again to overwrite with the new todos
+            file = open("todo.txt", 'w')
+            file.writelines(todos)
+            file.close()
+
         case 'show':
+            file = open("todo.txt", "r")
+            todos = file.readlines()
+            file.close()
+
+            # remove 
+            # new_todos = [item.strip("\n") for item in todos]
+            
             for index, item in enumerate(todos):
-                print(f"{index + 1}-{item}")
+                item = item.strip("\n")
+                row = f"{index + 1}-{item}"
+                print(row)
+
         case 'edit':
             number = int(input("Number of the todo to edit: "))
             number -= 1
