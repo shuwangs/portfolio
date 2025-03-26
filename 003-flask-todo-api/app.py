@@ -7,62 +7,72 @@ user_prompt = "Enter a todo: "
 while 1:
     user_action = input("Type add, show, edit, delete or exit:")
     user_action = user_action.strip()
-    match user_action:
-        case 'add':
-            todo = input(user_prompt) + "\n"      
 
-            with open('todo.txt', "r") as file:
-                todos = file.readlines()
+    if user_action.startswith('add'):
+        todo = user_action[4:]
 
-            # Append the newly added todo
-            todos.append(todo)
+        with open('todo.txt', "r") as file:
+            todos = file.readlines()
 
-            # Open the file again to overwrite with the new todos
-            with open('todo.txt', "w") as file:
-                file.writelines(todos)
+        # Append the newly added todo
+        todos.append(todo + "\n")
 
-    
+        # Open the file again to overwrite with the new todos
+        with open('todo.txt', "w") as file:
+            file.writelines(todos)
 
-        case 'show':
-            with open('todo.txt', "r") as file:
-                todos = file.readlines()
-            
-            for index, item in enumerate(todos):
-                item = item.strip("\n")
-                row = f"{index + 1}-{item}"
-                print(row)
+    elif user_action.startswith('show'):
+        with open('todo.txt', "r") as file:
+            todos = file.readlines()
 
-        case 'edit':
-            number = int(input("Number of the todo to edit: "))
+        for index, item in enumerate(todos):
+            item = item.strip("\n")
+            row = f"{index + 1}-{item}"
+            print(row)
+
+    elif user_action.startswith('edit'):
+        try:
+            number = int(user_action[5:])
+            print(number)
             number -= 1
+
             with open('todo.txt', "r") as file:
                 todos = file.readlines()
-            print("Here is the todos existing.", todos)
-            
+                # print("Here is the todos existing.", todos)
+
             new_todo = input("Enter new todo: ")
             todos[number] = new_todo + "\n" # Add '\n' to be consistent with rest W
 
             with open('todo.txt', "w") as file:
                 file.writelines(todos)
 
-        case 'delete':
-            number = int(input("Number of the todo to complete:"))
+        except ValueError:
+            print("Your command is not valid.")
+            continue
+
+    elif user_action.startswith('delete'):
+        try:
+            number = int(user_action[7:])
 
             with open("todo.txt", "r") as file:
                 todos = file.readlines()
 
             rm_todo = todos.pop(number-1)
-            
+
             with open("todo.txt", "w") as file:
                 file.writelines(todos)
-            
-            message = f"Todo: {rm_todo} was removed from the list"
-            print(message)
 
-        case 'exit':
-            break
-        case _:
-            print("Hey, you are using invalid workd")
+            message = f"Todo: {rm_todo} was removed from the list. "
+            print(message)
+        except IndexError:
+            print("There is no item with that number")
+            continue
+    elif user_action.startswith('exit'):
+        print('Bye')
+        break
+
+    else:
+        print("Hey, command is invalid.")
 
 
 # app = Flask(__name__)
