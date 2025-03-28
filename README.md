@@ -6,16 +6,13 @@ This repo contains my learning and showcase projects built as I strengthen my Py
 ---
 
 ## 📁 Projects
-### 🔹 [001 - Fruit Count](./001-fruit-count)
-A fun and simple script-based project to count fruit types and explore basic Python dictionary logic.  
-**Skills**: Python, functions, beginner scripting
 
-### 🔹 [002 - Hospital Readmission Analysis](./002-readmission-analysis)
+### 🔹 [001 - Hospital Readmission Analysis](./002-readmission-analysis)
 Exploratory analysis on a 25,000-row hospital dataset, focusing on diabetic patient readmissions.  
 Includes: Python scripts, Jupyter notebook, visualizations, and project packaging.  
 **Skills**: Python, Pandas, Seaborn, Git, GitHub
 
-### 🔹 003 - (Ongoing) Flask todo API
+### 🔹 002 - (Ongoing) Flask todo API
 A lightweight Flask API for managing and serving machine learning predictions or todo items.  
 **Skills**: Flask, FastAPI (TBD), RESTful API, SQLite, Deployment
 
