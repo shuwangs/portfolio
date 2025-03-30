@@ -40,6 +40,9 @@ while True:
         case "Add":
             todos = functions.get_todos()
             new_todo = values["todo"] + "\n"
+            if new_todo.strip() == "":
+                sg.popup("Cannot add an empty task.")
+                continue
             todos.append(new_todo)
             functions.write_todos(todos)
             window['todos'].update(values=todos)
