@@ -1,4 +1,4 @@
-# ✅ Cross-Platform Todo App (CLI + GUI + Flask Web + Streamlit)
+# ✅ Cross-Platform Todo App (CLI + GUI + Streamlit)
 
 This is a personal productivity project built to practice Python application development across multiple interfaces:
 - 🖥️ Command Line (CLI)
