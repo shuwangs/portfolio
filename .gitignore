@@ -16,3 +16,4 @@ __pycache__/
 /003-flask-todo-api/.idea
 *.pyd
 /003-flask-todo-api/venv
+/.idea
