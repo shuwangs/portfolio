@@ -42,11 +42,13 @@ The dataset contains **25,000 hospital visit records** with the following key co
 ---
 
 ## 📁 Project Structure
+```
 📦002-readmission-analysis/
 ├── data/hospital_readmissions.csv # Sample data file 
 ├── readmission-analysis.ipynb # Jupyter notebook with full EDA 
 ├── readmission-analysis.py # (Optional) Refactored logic in .py format
 ├── README.md # You're here!
+```
 
 
 ![Python](https://img.shields.io/badge/Python-3.9-blue.svg)
