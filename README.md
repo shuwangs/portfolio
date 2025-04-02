@@ -12,7 +12,7 @@ Exploratory analysis on a 25,000-row hospital dataset, focusing on diabetic pati
 Includes: Python scripts, Jupyter notebook, visualizations, and project packaging.  
 **Skills**: Python, Pandas, Seaborn, Git, GitHub
 
-### 🔹 002 - (Ongoing) Flask todo API
+### 🔹 002 - Flask todo API
 A lightweight Flask API for managing and serving machine learning predictions or todo items.  
 **Skills**: Flask, FastAPI (TBD), RESTful API, SQLite, Deployment
 
