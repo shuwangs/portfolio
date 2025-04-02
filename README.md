@@ -16,7 +16,7 @@ Includes: Python scripts, Jupyter notebook, visualizations, and project packagin
 A lightweight Flask API for managing and serving machine learning predictions or todo items.  
 **Skills**: Flask, FastAPI (TBD), RESTful API, SQLite, Deployment
 
-### 🔹 [003 - Personal Website Ongoing ](#)
+### 🔹 [003 - Personal Website (Ongoing) ](#)
 ---
 
 ## 📌 About This Repo
