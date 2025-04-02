@@ -1,6 +1,6 @@
 # 💼 My Portfolio Projects
 
-Hi, I'm Shuwang — a bioinformatics researcher transitioning into Software Development.  
+Hi, I'm Shu Wang — a bioinformatics researcher transitioning into Software Development.  
 This repo contains my learning and showcase projects built as I strengthen my Python, software engineering, and data science skills.
 
 ---
