@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Paws On the Keyboard </title>
   <link rel="stylesheet" href="assets/style.css" />
-  <link rel="styplesheet" href = "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  <link rel="stylesheet" href = "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 </head>
 
 <body>
@@ -15,9 +15,7 @@
             <header>
                 <div class="logo">
                     <i class="fa-solid fa-a"></i>
-                    <div class="logo-text">
-                        <h1>Paws On the Keyboard</h1>
-                    </div>
+                    <div class="logo-text">Paws On the Keyboard</div>
                 </div>
                 <nav>
                     <div class="togglebtn">
@@ -42,7 +40,7 @@
                     <img src="assets/images/1.JPG" alt = "profile image">
                 </div>
                 <div class="hero-text">
-                    <h5>Hi, I'm  <span class="">Developer</span></h5>
+                    <h5>Hi, I'm  <span class="input">Web Developer</span></h5>
                     <h1>Shu Wang</h1>
                     <p>I'm a  with a background in bioinformatics and a deep interest in building practical, thoughtful software. Currently, I work full-time in bioinformatics while pursuing my M.S. in Computer Science through Georgia Tech's OMSCS program.
                     My favorite tools are Python, data, and a well-structured plan. I enjoy turning ideas into reality, whether it's a portfolio project, an internal tool, or a little app that makes life easier.
@@ -53,8 +51,8 @@
                     </div>
                     
                     <div class="social">
-                        <a href="#"><i class="fa-brands fa-linkedin"></i></a>
-                        <a href="#"><i class="fa-brands fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/shuuwang/"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="https://github.com/shuwangs"><i class="fa-brands fa-github"></i></a>
                     </div>
                 </div>
 
@@ -62,5 +60,28 @@
 
         </div>
     </div>
+    <!--- typed js for typing text effects -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.0/typed.min.js"></script>
+    <script>
+        // Creating button clik show hide nav bar 
+        var togglebtn = document.querySelector('.togglebtn');
+        var nav = document.querySelector('.navlinks');;
+        var links = document.querySelectorAll('.navlinks li');
+
+        togglebtn.addEventListener('click', function() {
+            this.classList.toggle('click');
+            nav.classList.toggle('open');
+        
+        });
+
+        var typed = new Typed('.input', {
+            strings: ['Web Developer','Software Developer', 'Data Analyst', 'Bioinformatician'],
+            typeSpeed: 100,
+            backSpeed: 55,
+            loop: true
+        })
+
+    </script>
 
 </body>
+</html>
