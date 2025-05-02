@@ -12,6 +12,10 @@ for index, row in df.iterrows():
     pdf.set_text_color(240, 200, 100)
 
     pdf.cell(w= 0, h= 12, txt=row["Topic"], align="L", ln = 1, border=0) # add text through cell
+
+    for i in range(20, 298, 10):
+        pdf.line(10, i, 200, i)
+
     pdf.line(10, 21, 200, 21)
 
     # Set the footer
