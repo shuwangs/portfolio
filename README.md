@@ -20,14 +20,14 @@ A lightweight Flask API for managing and serving machine learning predictions or
 
 ### 🔹 [004 - PDF Maker](https://github.com/shuwangs/portfolio/tree/main/004-pdf-maker)
 
-A simple Python script that generates a lined PDF document for note-taking or journaling, based on a list of topics and desired page counts provided via CSV.
+A simple Python script that generates a lined PDF document for note-taking or journaling, based on a list of topics and desired page counts provided via CSV.\
 **Skills**: Python, FPDF, Pandas, File I/O, PDF Generation
 
 ### 🔹 [005 - Excel to PDF Invoice Generator](https://github.com/shuwangs/portfolio/tree/main/005-excel-to-pdf-invoice)
-This is a Python automation project that reads Excel-based invoices and generates well-formatted PDF versions for each invoice file. It demonstrates file parsing, PDF layout formatting, and automation using Python
+This is a Python automation project that reads Excel-based invoices and generates well-formatted PDF versions for each invoice file. It demonstrates file parsing, PDF layout formatting, and automation using Python.\
 **Skills**: python, fpdf, glob, os, path
 
-### 🔹 [005 - Excel to PDF Invoice Generator] Ongoging (https://github.com/shuwangs/portfolio/tree/main/006-Emailing-dail-news-from-API)
+### 🔹 [006 - Emailing Daily News From API] Ongoging (https://github.com/shuwangs/portfolio/tree/main/006-Emailing-dail-news-from-API)
 
 
 ---
