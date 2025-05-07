@@ -14,6 +14,7 @@ for filepath in filepaths:
     pdf = FPDF(orientation="P", unit="mm", format="A4")
     pdf.add_page()
 
+    # Add the invoice title for each excel
     filename = Path(filepath).stem
     invoice_nr = filename.split("-")[0]
 
