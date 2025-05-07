@@ -17,12 +17,15 @@ This is a Python automation project that reads Excel-based invoices and generate
 ---
 
 ## 🗂️ Project Structure
+
+```
 invoice-pdf-generator/
 ├── invoices/ # Folder with .xlsx invoice files
 ├── PDFs/ # Output folder for generated PDFs
 ├── pythonhow.png # Company logo used in the PDF
 ├── main.py # Main script to generate PDFs
 └── README.md
+```
 
 ---
 
