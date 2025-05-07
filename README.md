@@ -16,7 +16,12 @@ Includes: Python scripts, Jupyter notebook, visualizations, and project packagin
 A lightweight Flask API for managing and serving machine learning predictions or todo items.  
 **Skills**: Flask, FastAPI (TBD), RESTful API, SQLite, Deployment
 
-### 🔹 [003 - Personal Website (Ongoing) ](#)
+### 🔹 [003 - Personal Website (Ongoing)](#)
+
+### 🔹 [004 - PDF Maker](https://github.com/shuwangs/portfolio/tree/main/004-pdf-maker)
+
+A simple Python script that generates a lined PDF document for note-taking or journaling, based on a list of topics and desired page counts provided via CSV.
+**Skills**: Python, FPDF, Pandas, File I/O, PDF Generation
 ---
 
 ## 📌 About This Repo
