@@ -14,14 +14,15 @@ for filepath in filepaths:
     pdf = FPDF(orientation="P", unit="mm", format="A4")
     pdf.add_page()
 
-    # Add the invoice title for each excel
+    # Add the invoice no and data for each excel
     filename = Path(filepath).stem
-    invoice_nr = filename.split("-")[0]
+    invoice_nr, date = filename.split("-")
 
     pdf.set_font(family="Times", size=16, style="B")
-    pdf.cell(w=50, h=8, txt=f"Invoice nr. {invoice_nr}")
+    pdf.cell(w=50, h=8, txt=f"Invoice nr. {invoice_nr}", ln=1)
 
-
+    pdf.set_font(family="Times", size=14, style="B")
+    pdf.cell(w=50, h=8, txt=f"Date: {date}", ln=1)
 
     pdf.output(f"PDFs/{filename}.pdf")
 
