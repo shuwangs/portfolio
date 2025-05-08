@@ -47,11 +47,6 @@ EMAIL_RECEIVER=recipient_email@gmail.com
 NEWS_API_KEY=your_newsapi_key
 ```
 
----
-
-## 🔐 Requirements
-Requirements are listed in requirements.txt
-
 --- 
 
 ## 👩‍💻 About
