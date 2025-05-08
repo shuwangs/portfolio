@@ -1,6 +1,6 @@
 # 🗞️ Daily News Email Bot
 
-This project is a simple but powerful Python automation script that fetches the latest news on a given topic using the NewsAPI and sends a summary email to your inbox. It demonstrates API integration, secure email delivery via Gmail SMTP, and best practices in secret management.
+This project is a simple but powerful Python automation script that fetches the latest news on a given topic using the NewsAPI and sends a summary email to your inbox. It demonstrates API integration, secure email delivery via Gmail SMTP, and best practices in secret management.-
 
 ---
 
