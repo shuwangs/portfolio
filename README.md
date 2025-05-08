@@ -51,8 +51,6 @@ If you’re a recruiter or collaborator:
 
 - Python (Pandas, FastAPI, Flask, Streamlit)
 - C, C++
-- HTML, CSS, Javascript
-- 
 - Git & GitHub workflows
 - SQL & cloud platforms (AWS/GCP coming soon!)
 - Test-driven development, documentation, and deployment
