@@ -27,8 +27,11 @@ A simple Python script that generates a lined PDF document for note-taking or jo
 This is a Python automation project that reads Excel-based invoices and generates well-formatted PDF versions for each invoice file. It demonstrates file parsing, PDF layout formatting, and automation using Python.\
 **Skills**: python, fpdf, glob, os, path
 
-### 🔹 [006 - Emailing Daily News From API] Ongoging (https://github.com/shuwangs/portfolio/tree/main/006-Emailing-dail-news-from-API)
+### 🔹 [006 - Emailing Daily News From API](https://github.com/shuwangs/portfolio/tree/main/006-Emailing-dail-news-from-API)
+This is a Python automation project that fetches the latest news articles on a chosen topic using the NewsAPI and emails a daily summary to the user. It showcases API integration, email formatting with MIME, and secure credential management using environment variables.
+**Skills**: python, requests, smtplib, dotenv
 
+### 🔹 [007 - Weather Data API] Ongoing (#)
 
 ---
 
