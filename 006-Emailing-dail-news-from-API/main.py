@@ -1,8 +1,11 @@
 import requests
 import datetime
+import os
 from send_email import send_email
+from dotenv import load_dotenv
 
-api_key = "82bd1e56be334bd99f6ddd590cde0b67"
+load_dotenv()  # This must be called before os.getenv
+api_key = os.getenv("NEWS_API_KEY")
 topic = "tesla"
 date = datetime.date.today() - datetime.timedelta(days=1)
 url = "https://newsapi.org/v2/everything?" \
