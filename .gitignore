@@ -17,3 +17,9 @@ __pycache__/
 *.pyd
 /003-flask-todo-api/venv
 /.idea
+005-excel-to-pdf-invoice/.idea/005-excel-to-pdf-invoice.iml
+/006-Emailing-dail-news-from-API/.idea
+/007-weather-data-api/.idea
+/005-excel-to-pdf-invoice/.idea
+/004-pdf-maker/.idea
+/008-weather-forecast-for-the-next-days/.idea
