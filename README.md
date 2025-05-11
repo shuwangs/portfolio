@@ -43,8 +43,8 @@ An end-to-end Streamlit application that fetches weather forecast data from the 
 **Skills**: Python, Streamlit, OpenWeatherMap API, requests, Plotly, dotenv, data visualization, interactive UI
 
 ### 🔹 [009 - NLP(Natural Language Processing) for eBooks](https://github.com/shuwangs/portfolio/tree/main/009-nlp-for-ebook)
-A data science project focused on extracting insights from eBook text using classic NLP techniques. The notebook processes raw book content by cleaning text, removing stopwords, and performing tokenization. It then applies frequency analysis and visualizes key terms using word clouds. Optional sentiment analysis and named entity recognition are considered for deeper understanding.、
-✅ Demonstrates the use of NLP preprocessing steps, text analysis, and data visualization to uncover patterns in literary works.、
+A data science project focused on extracting insights from eBook text using classic NLP techniques. The notebook processes raw book content by cleaning text, removing stopwords, and performing tokenization. It then applies frequency analysis and visualizes key terms using word clouds. Optional sentiment analysis and named entity recognition are considered for deeper understanding.\
+✅ Demonstrates the use of NLP preprocessing steps, text analysis, and data visualization to uncover patterns in literary works.\
 **Skills**: Python, pandas, NLTK, matplotlib, wordcloud, NLP, text preprocessing, tokenization, data visualization
 
 ### 🔹 [010 - Webscraping Music Events] Coming soon (#)
