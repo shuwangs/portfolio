@@ -31,7 +31,28 @@ This is a Python automation project that reads Excel-based invoices and generate
 This is a Python automation project that fetches the latest news articles on a chosen topic using the NewsAPI and emails a daily summary to the user. It showcases API integration, email formatting with MIME, and secure credential management using environment variables.\
 **Skills**: python, requests, smtplib, dotenv
 
-### 🔹 [007 - Weather Data API] Ongoing (#)
+### 🔹 [007 - Weather Data API](https://github.com/shuwangs/portfolio/tree/main/007-weather-data-api)
+A backend-only project that implements a clean and modular Flask API for querying historical weather data. The system reads raw text-based records from multiple files, parses them with pandas, and exposes multiple dynamic endpoints supporting queries by station, date, and year.\
+✅ Demonstrates ability to build scalable RESTful APIs, work with file-based data pipelines, and return well-formatted JSON responses.\
+**Skills**: Python, Flask, REST API, pandas, data parsing, JSON serialization, backend development
+
+---
+
+### 🔹 [008 - Weather Forecast for the Next Days](https://github.com/shuwangs/portfolio/tree/main/008-weather-forecast-for-the-next-days)
+An end-to-end Streamlit application that fetches weather forecast data from the OpenWeatherMap API and visualizes short-term trends with Plotly. Users can input any city name, and the app returns interactive temperature plots and condition-specific icons (☀️/☁️/🌧️).\
+✅ Highlights experience in full-cycle development: frontend with Streamlit, backend API integration, environmental variable management, and data visualization.\
+**Skills**: Python, Streamlit, OpenWeatherMap API, requests, Plotly, dotenv, data visualization, interactive UI
+
+### 🔹 [009 - NLP(Natural Language Processing) for eBooks] Coming soon (#)
+
+
+### 🔹 [010 - Build a Webcam Alert App] Coming soon (#)
+
+
+### 🔹 [011 - Webscraping Music Events] Coming soon (#)
+
+
+### 🔹 [012 - Hotel Booking App] Coming soon (#)
 
 ---
 
