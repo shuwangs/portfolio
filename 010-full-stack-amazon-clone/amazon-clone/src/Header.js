@@ -1,14 +1,15 @@
 import React from 'react'
 import './Header.css'
-
+import SearchIcon from '@mui/icons-material/Search';
 
 function Header() {
   return (
     <div className='header'>
-        <img src = "https://pngimg.com/uploads/amazon/amazon_PNG11.png"/>
+        <img className="header__logo" src = "https://pngimg.com/uploads/amazon/amazon_PNG11.png" alt =""/>
 
         <div className = "header__search">
             <input type="text" className='header__searchInput' />
+            {/* <span class="material-icons-outlined"></span> */}
         </div>
 
         <div className='header__nav'> 
@@ -24,7 +25,7 @@ function Header() {
                 <span className='header__optionLineOne'>Your</span>
                 <span className='header__optionLineTwo'>Prime</span>                    
             </div>
-            
+
             <div className='header__option'>Cart</div>
         </div>      
  
