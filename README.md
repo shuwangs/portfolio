@@ -36,20 +36,18 @@ A backend-only project that implements a clean and modular Flask API for queryin
 ✅ Demonstrates ability to build scalable RESTful APIs, work with file-based data pipelines, and return well-formatted JSON responses.\
 **Skills**: Python, Flask, REST API, pandas, data parsing, JSON serialization, backend development
 
----
 
 ### 🔹 [008 - Weather Forecast for the Next Days](https://github.com/shuwangs/portfolio/tree/main/008-weather-forecast-for-the-next-days)
 An end-to-end Streamlit application that fetches weather forecast data from the OpenWeatherMap API and visualizes short-term trends with Plotly. Users can input any city name, and the app returns interactive temperature plots and condition-specific icons (☀️/☁️/🌧️).\
 ✅ Highlights experience in full-cycle development: frontend with Streamlit, backend API integration, environmental variable management, and data visualization.\
 **Skills**: Python, Streamlit, OpenWeatherMap API, requests, Plotly, dotenv, data visualization, interactive UI
 
-### 🔹 [009 - NLP(Natural Language Processing) for eBooks] Coming soon (#)
+### 🔹 [009 - NLP(Natural Language Processing) for eBooks](https://github.com/shuwangs/portfolio/tree/main/009-nlp-for-ebook)
+A data science project focused on extracting insights from eBook text using classic NLP techniques. The notebook processes raw book content by cleaning text, removing stopwords, and performing tokenization. It then applies frequency analysis and visualizes key terms using word clouds. Optional sentiment analysis and named entity recognition are considered for deeper understanding.\
+✅ Demonstrates the use of NLP preprocessing steps, text analysis, and data visualization to uncover patterns in literary works.\
+**Skills**: Python, pandas, NLTK, matplotlib, wordcloud, NLP, text preprocessing, tokenization, data visualization
 
-
-### 🔹 [010 - Build a Webcam Alert App] Coming soon (#)
-
-
-### 🔹 [011 - Webscraping Music Events] Coming soon (#)
+### 🔹 [010 - Webscraping Music Events] Coming soon (#)
 
 
 ### 🔹 [012 - Hotel Booking App] Coming soon (#)
