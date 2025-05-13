@@ -19,10 +19,11 @@
     margin-bottom: 15px;
 }
 
-。product__info {
+.product__price {
     height: 100px;
     width: 100%;
     margin-bottom: 15px;
+
 }
 
 .product__price {
@@ -37,3 +38,12 @@
     font-weight: bold;
     color: #111;
 }
+
+.product__rating {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5px;
+}
+
+
