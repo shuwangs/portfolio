@@ -47,7 +47,7 @@ A data science project focused on extracting insights from eBook text using clas
 ✅ Demonstrates the use of NLP preprocessing steps, text analysis, and data visualization to uncover patterns in literary works.\
 **Skills**: Python, pandas, NLTK, matplotlib, wordcloud, NLP, text preprocessing, tokenization, data visualization
 
-### 🔹 [010 - Webscraping Music Events] Coming soon (#)
+### 🔹 [010 - Amazon Clone] Ongoing (https://github.com/shuwangs/portfolio/tree/main/010-full-stack-amazon-clone/amazon-clone)
 
 
 ### 🔹 [012 - Hotel Booking App] Coming soon (#)
