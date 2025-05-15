@@ -1,7 +1,7 @@
 import React from 'react'
-import './Checkout.css'
+import './Subtotal.css'
 import { NumericFormat } from 'react-number-format';
-function Subtotal() {
+function Subtotal({baskketCount, basketTotal}) {
   return (
     <div className='subtotal'>
       <NumericFormat
@@ -9,7 +9,7 @@ function Subtotal() {
           <>
             <p>
                 {/* Replace with the actual number of items in the basket */}
-              Subtotal (0 items): <strong>0</strong>
+              Subtotal ({baskketCount} items): <strong>{value}</strong>
             </p>
             <small className='subtotal__gift'>
               <input type="checkbox" /> This order contains a gift
@@ -17,7 +17,7 @@ function Subtotal() {
           </>
         )}
         decimalScale={2}
-        value={0} // Replace with the actual value 
+        value={basketTotal} // Replace with the actual value 
         displayType={'text'}
         thousandSeparator={true}
         prefix={'$'}
