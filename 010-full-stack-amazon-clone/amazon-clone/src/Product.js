@@ -1,7 +1,25 @@
 import React from 'react'
 import './Product.css'
+import { useStateValue } from './StateProvider';
 
-function Product({title, price, rating, image}) {
+function Product({id, title, price, rating, image}) {
+  const[{basket}, dispatch] = useStateValue();
+  console.log('this is the basket >>>', basket);
+
+  const addToBasket = () => {
+    // dispatch the item into the data layer
+    // console.log('this is a product');
+    dispatch({
+      type: 'ADD_TO_BASKET',
+      item: {
+        id: id,
+        title: title,
+        image: image,
+        price: price,
+        rating: rating,
+      },
+    });
+  }
   return (
     <div className='product'>
       {/* products contains : a title, price, start rating, and a photo */}
@@ -21,7 +39,7 @@ function Product({title, price, rating, image}) {
             </div>
        </div>
        <img src={image} alt="" />
-        <button className='product__button'>Add to Basket</button>
+        <button className='product__button' onClick={addToBasket}>Add to Basket</button>
     </div>
   )
 }
