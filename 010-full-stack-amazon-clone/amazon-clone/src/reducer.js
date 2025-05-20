@@ -3,6 +3,11 @@ export const initialState = {
   // Add any other initial state properties you need
 };
 
+// Selectors
+export const getBasketTotal = (basket) =>
+    basket?.reduce((amount, item) => item.price + amount, 0);
+
+
 const reducer = (state, action) => {
     console.log(action);
     
