@@ -12,11 +12,11 @@ function App() {
       <Header />
 
         <Routes>
+          <Route path = "/login">
+          <h1>Login</h1>
+          </Route>
           <Route path="/checkout" element={
-      
-
               <Checkout />
-
           } />
           < Route path="/" element={
             <Home />
