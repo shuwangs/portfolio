@@ -16,26 +16,35 @@ function Home() {
                 {/* Product Rows*/}
                 <div className="home__row">
                     <Product 
-                        id = "123245"
-                        title = "cute ugly shoes"
+                        id = "12g243"
+                        title = "Wellness Healthly Indulgence Shreds Adult Wet Cat Food, Natural, Protein-Rich, Grain Free, 3 Ounce Pouch, 24 Pack, (Chicken & Turkey)"
                         price = {39.9}
                         rating = {3}
-                        image = "https://m.media-amazon.com/images/I/713AO8fIDuL._AC_SY300_SX300_.jpg" 
-                        />
+                        image = "https://m.media-amazon.com/images/I/81Ts12EL37L._AC_SY240_.jpg" 
+                    />
 
                     <Product 
-                        id = "123245"
+                        id = "123s"
                         title = "cute ugly shoes"
                         price = {39.9}
                         rating = {3}
                         image = "https://m.media-amazon.com/images/I/713AO8fIDuL._AC_SY300_SX300_.jpg" 
-                        />
+                    />
                     
                 {/* Product */}
                 </div>
                 <div className="home__row">
                     <Product 
-                        id = "123245"
+                        id = "12sg45"
+                        title = {`LOKO Bathroom Mirror with Shelf, 23.5" x 17.5" Rectangle Vanity Mirror with Exquisite Frame,
+                        Expansion Screws, Wall Mounted Horizontal Hanging Mirror for Entryway, Living Room (Natural)`}
+                        price = {49.99}
+                        rating = {4}
+                        image = "https://m.media-amazon.com/images/I/71tMFEtpd0L.__AC_SX300_SY300_QL70_FMwebp_.jpg" 
+                    />
+                        
+                    <Product 
+                        id = "123248"
                         title = "cute ugly shoes"
                         price = {39.9}
                         rating = {3}
@@ -43,15 +52,7 @@ function Home() {
                         />
                         
                     <Product 
-                        id = "123245"
-                        title = "cute ugly shoes"
-                        price = {39.9}
-                        rating = {3}
-                        image = "https://m.media-amazon.com/images/I/713AO8fIDuL._AC_SY300_SX300_.jpg" 
-                        />
-                        
-                    <Product 
-                        id = "123245"
+                        id = "1232s45"
                         title = "cute ugly shoes"
                         price = {39.9}
                         rating = {3}
@@ -60,7 +61,7 @@ function Home() {
                 </div>      
                 <div className="home__row">
                     <Product 
-                        id = "123245"
+                        id = "123245f"
                         title = "cute ugly shoes"
                         price = {39.9}
                         rating = {3}

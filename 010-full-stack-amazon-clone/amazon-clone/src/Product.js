@@ -24,7 +24,9 @@ function Product({id, title, price, rating, image}) {
     <div className='product'>
       {/* products contains : a title, price, start rating, and a photo */}
       <div className='product__info'>
-            <p>{title}</p>
+            <p className='product__title'>
+                {title.length > 80 ? title.slice(0, 77) + "..." : title}
+            </p>
             <p className='product__price'>
             <small>$</small>
             <strong>{price}</strong>
