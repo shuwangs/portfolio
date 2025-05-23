@@ -2,30 +2,38 @@ import './App.css';
 import Header from './Header.js';
 import Home from './Home.js';
 import Checkout from './Checkout.js';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
+import Login from './Login';
 
-function App() {
+function AppWrapper() {
   return (
-    // BEM convention
     <Router>
-      <div className="app">
-      <Header />
-
-        <Routes>
-          <Route path = "/login">
-          <h1>Login</h1>
-          </Route>
-          <Route path="/checkout" element={
-              <Checkout />
-          } />
-          < Route path="/" element={
-            <Home />
-          }/>
-          
-        </Routes>
-      </div>
+      <App />
     </Router>
   );
 }
 
-export default App;
+function App() {
+  const location = useLocation();
+
+  return (
+    <div className="app">
+      {location.pathname !== "/login" && <Header />}
+      <Routes>
+        <Route path="/login" element={<Login />} />
+        <Route path="/checkout" element={<Checkout />} />
+        <Route path="/" element={<Home />} />
+      </Routes>
+    </div>
+  );
+}
+
+export default AppWrapper;
+
+
+
+
+
+
+
+
