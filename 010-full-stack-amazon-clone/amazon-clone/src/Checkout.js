@@ -1,7 +1,6 @@
 import React from 'react'
 import './Checkout.css'
 import  Subtotal from './Subtotal.js'
-import reducer from './reducer.js'
 import { useStateValue } from './StateProvider';
 import CheckoutProduct from './CheckoutProduct.js';
 
