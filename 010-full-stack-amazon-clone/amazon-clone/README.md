@@ -2,6 +2,8 @@
 - Stripe functionality
 - Chekcout page(payment page)
 - Cloud function to process stripe payments(serverless)
+- firebase for real-time database( Firestore)
+- MERN Stack
 
 
 
