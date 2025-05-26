@@ -14,6 +14,7 @@ function Checkout() {
         alt=""/>
 
         <div className="checkout__title">
+          <h3>Hello {user? user.email.split('@')[0] : 'Guest'}</h3>
           <h2>Your Shopping Basket</h2> 
       
           {basket.map(item => (
