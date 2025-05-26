@@ -1,3 +1,12 @@
+# 
+- Stripe functionality
+- Chekcout page(payment page)
+- Cloud function to process stripe payments(serverless)
+
+
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
