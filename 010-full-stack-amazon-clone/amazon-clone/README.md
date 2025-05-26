@@ -1,4 +1,4 @@
-# 
+# Amazon Clone
 - Stripe functionality
 - Chekcout page(payment page)
 - Cloud function to process stripe payments(serverless)
