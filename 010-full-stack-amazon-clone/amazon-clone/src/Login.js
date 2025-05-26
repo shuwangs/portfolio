@@ -1,8 +1,13 @@
 import React, {useState} from 'react'
 import './Login.css'
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
+import { createUserWithEmailAndPassword } from 'firebase/auth';
+import { auth } from './firebase';  // your path may vary
+
 
 function Login() {
+    // allow programtically change the URL
+    const navigate = useNavigate();
     const [email, setEmail] = React.useState("");
     const [password, setPassword] = React.useState(""); 
     const signIn = e=>{
@@ -13,7 +18,19 @@ function Login() {
     const register = e=>{
         e.preventDefault(); // Prevents the page from refreshing
         // Do some fancy firebase register stuff
-        console.log("Register");
+
+        createUserWithEmailAndPassword(auth, email, password)
+        .then((auth) => {
+          console.log('User auth:', auth);
+          if(auth) {
+            // Successfully created a new user
+            navigate('/');
+          }
+        })
+        .catch((error) => {
+          console.error(error);
+        });
+    
     }
 
   return (
