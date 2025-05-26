@@ -33,7 +33,7 @@ function Header() {
         <div className='header__nav'> 
             <Link to={!user && "/login"} >
                 <div onClick={handleAuthentication} className='header__option'>
-                    <span className='header__optionLineOne'>Hello Guest</span>
+                    <span className='header__optionLineOne'>Hello { user ? user.email.split('@')[0] : 'Guest' }</span>
                     <span className='header__optionLineTwo'> {user ? 'Sign Out' : 'Sign In'}</span>
                 </div>
             </Link>
@@ -50,7 +50,7 @@ function Header() {
             <Link to="/checkout">
                 <div className='header__optionBasket'> 
                     <ShoppingBasketIcon />
-                    <span className='header__optionLineTwo header__basketCount'>{basket?.length}</span>
+                    <span className='header__optionLineTwo header__basketCount'>{ basket?.length}</span>
                 </div>
             </Link>
             
