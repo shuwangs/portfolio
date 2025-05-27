@@ -1,9 +1,11 @@
 # Amazon Clone
-- Stripe functionality
-- Chekcout page(payment page)
-- Cloud function to process stripe payments(serverless)
-- firebase for real-time database( Firestore)
-- MERN Stack
+
+Build payment/Checkout Page
+  - Stripe functionality
+  - Chekcout page(payment page)
+  - Cloud function to process stripe payments(serverless)
+  - firebase for real-time database( Firestore)
+  - MERN Stack
 
 ## Deployment 
 https://amzaon-clone-4bb41.web.app
