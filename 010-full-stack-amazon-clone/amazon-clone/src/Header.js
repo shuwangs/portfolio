@@ -19,10 +19,10 @@ function Header() {
   return (
     <div className='header'>
         <Link to="/">
-        {/* Logo */}
+        <img className="header__logo" src = "https://pngimg.com/uploads/amazon/amazon_PNG11.png" alt =""/>
+
         </Link>
        
-        <img className="header__logo" src = "https://pngimg.com/uploads/amazon/amazon_PNG11.png" alt =""/>
 
         <div className = "header__search">
             <input type="text" className='header__searchInput' />
