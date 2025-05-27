@@ -5,7 +5,8 @@
 - firebase for real-time database( Firestore)
 - MERN Stack
 
-
+## Deployment 
+https://amzaon-clone-4bb41.web.app
 
 
 
