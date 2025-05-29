@@ -68,11 +68,12 @@ If you’re a recruiter or collaborator:
 
 ## 🛠️ Technologies I'm Exploring
 
-- Python (Pandas, FastAPI, Flask, Streamlit)
-- C, C++
-- Git & GitHub workflows
-- SQL & cloud platforms (AWS/GCP coming soon!)
-- Test-driven development, documentation, and deployment
+- Python (Pandas, FastAPI, Flask, Streamlit)  
+- Web development (React, JavaScript, HTML/CSS, REST APIs)  
+- C, C++, Java (systems programming, data structures, interpreter design)  
+- Git & GitHub workflows (branching, pull requests, CI/CD pipelines)  
+- SQL and cloud platforms (AWS, GCP — coming soon!)  
+- Test-driven development (TDD), clean code, documentation, and automated deployment
 
 ---
 
