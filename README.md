@@ -50,7 +50,7 @@ A data science project focused on extracting insights from eBook text using clas
 ### 🔹 [010 - Amazon Clone] Ongoing (https://github.com/shuwangs/portfolio/tree/main/010-full-stack-amazon-clone/amazon-clone)
 
 
-### 🔹 [012 - Hotel Booking App] Coming soon (#)
+### 🔹 [011 - Lisp Interpreter in C](https://github.com/shuwangs/portfolio/tree/main/011-lisp-interpreter-in-c)
 
 ---
 
