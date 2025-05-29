@@ -4,7 +4,28 @@ Hi, I'm Shu Wang — a bioinformatics researcher transitioning into Software Dev
 This repo contains my learning and showcase projects built as I strengthen my Python, software engineering, and data science skills.
 
 ---
+## 📌 About This Repo
 
+This repo is meant to:
+- Showcase my progress as I build a career in Software Engineering
+- Help me practice professional-level coding, structuring, and documentation
+- Serve as a central place for my GitHub portfolio
+
+If you’re a recruiter or collaborator:  
+📬 Feel free to check out individual folders or reach out via [swang3130@gatech.edu](swang3130@gatech.edu) or [LinkedIn](https://www.linkedin.com/in/shuuwang/).
+
+---
+
+## 🛠️ Technologies I'm Exploring
+
+- Python (Pandas, FastAPI, Flask, Streamlit)  
+- Web development (React, JavaScript, HTML/CSS, REST APIs)  
+- C, C++, Java (systems programming, data structures, interpreter design)  
+- Git & GitHub workflows (branching, pull requests, CI/CD pipelines)  
+- SQL and cloud platforms (AWS, GCP — coming soon!)  
+- Test-driven development (TDD), clean code, documentation, and automated deployment
+
+---
 ## 📁 Projects
 
 ### 🔹 [001 - Hospital Readmission Analysis](./001-readmission-analysis)
@@ -54,28 +75,7 @@ A data science project focused on extracting insights from eBook text using clas
 
 ---
 
-## 📌 About This Repo
 
-This repo is meant to:
-- Showcase my progress as I build a career in Software Engineering
-- Help me practice professional-level coding, structuring, and documentation
-- Serve as a central place for my GitHub portfolio
-
-If you’re a recruiter or collaborator:  
-📬 Feel free to check out individual folders or reach out via [swang3130@gatech.edu](swang3130@gatech.edu) or [LinkedIn](https://www.linkedin.com/in/shuuwang/).
-
----
-
-## 🛠️ Technologies I'm Exploring
-
-- Python (Pandas, FastAPI, Flask, Streamlit)  
-- Web development (React, JavaScript, HTML/CSS, REST APIs)  
-- C, C++, Java (systems programming, data structures, interpreter design)  
-- Git & GitHub workflows (branching, pull requests, CI/CD pipelines)  
-- SQL and cloud platforms (AWS, GCP — coming soon!)  
-- Test-driven development (TDD), clean code, documentation, and automated deployment
-
----
 
 ## ✨ Contact
 
