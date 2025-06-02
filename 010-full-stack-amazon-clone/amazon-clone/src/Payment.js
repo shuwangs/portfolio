@@ -1,17 +1,17 @@
-import React, { use } from 'react'
+import React, { use, useEffect } from 'react'
 import './Payment.css'
 import { useStateValue } from './StateProvider'
 import CheckoutProduct from './CheckoutProduct';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { CardElement, useStripe, useElements } from '@stripe/react-stripe-js';
 import { NumericFormat } from 'react-number-format';
 import { getBasketTotal } from './reducer';
 import { useState } from 'react';
-
+import axios from 'axios'; // Import axios for HTTP requests
 
 function Payment() {
     const [{ basket, user }, dispatch] = useStateValue();
-
+    const navigate = useNavigate();
     // Hooks
 
     const stripe = useStripe();
@@ -21,9 +21,45 @@ function Payment() {
     const [disabled, setDisabled] = React.useState(true);
     const [succeeded, setSucceeded] = React.useState(false);
     const [processing, setProcessing] = React.useState("");
+    const [clientSecret, setClientSecret] = useState(true);
 
-    const handleSubmit = event =>{
+    useEffect(() => {
+        //Generate the special Strip secret which allows us to charge a customer
+
+        const getClientSecret = async () => {
+            //Axios is used to make HTTP requests
+            const response = await axios({
+                method: 'post',
+                    // Stripe expects the total in a currency subunit (e.g., cents for USD)
+                url:`/payments/create?total=${getBasketTotal(basket) * 100}` // Stripe expects the total in cents
+
+            });
+            setClientSecret(response.data.clientSecret);
+            
+        } 
+        getClientSecret();
+    }, [basket]); 
+
+    const handleSubmit = async (event) =>{
+        // Stripe payment integration
+        event.preventDefault();
+        setProcessing(true);
+
+
+        const payload = await stripe.confirmCardPayment('{CLIENT_SECRET}', {
+            payment_method: {
+                card: elements.getElement(CardElement),
+
+            }
+        }).then(({ paymentIntent }) => { // PaymentIntent = payment confirmation
+            setSucceeded(true);
+            setError(null);
+            setProcessing(false);
+
+            navigate('/orders', { replace: true }); // Redirect to orders page after payment
+        }) 
     }
+
     const handleChange = event => {
         // Listen for the changes in the Card Element
         // and display any errors as the customer tpyes their card details.
@@ -107,6 +143,8 @@ function Payment() {
                                 </button>
 
                             </div>
+                            {/* Errros shows only if there is an error */}
+                            {error && <div>{error}</div>}
                         </form>
                     </div>
                 </div>
