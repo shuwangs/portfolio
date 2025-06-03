@@ -7,7 +7,7 @@ import { CardElement, useStripe, useElements } from '@stripe/react-stripe-js';
 import { NumericFormat } from 'react-number-format';
 import { getBasketTotal } from './reducer';
 import { useState } from 'react';
-import axios from 'axios'; // Import axios for HTTP requests
+import axios from './axios'; // Import axios for HTTP requests
 
 function Payment() {
     const [{ basket, user }, dispatch] = useStateValue();
@@ -31,14 +31,17 @@ function Payment() {
             const response = await axios({
                 method: 'post',
                     // Stripe expects the total in a currency subunit (e.g., cents for USD)
-                url:`/payments/create?total=${getBasketTotal(basket) * 100}` // Stripe expects the total in cents
+                url: `/payments/create?total=${getBasketTotal(basket) * 100}` // Stripe expects the total in cents
 
             });
             setClientSecret(response.data.clientSecret);
             
         } 
         getClientSecret();
-    }, [basket]); 
+    }, [basket])
+
+    console.log('The secret is >>>', clientSecret);
+
 
     const handleSubmit = async (event) =>{
         // Stripe payment integration
@@ -46,7 +49,7 @@ function Payment() {
         setProcessing(true);
 
 
-        const payload = await stripe.confirmCardPayment('{CLIENT_SECRET}', {
+        const payload = await stripe.confirmCardPayment(clientSecret, {
             payment_method: {
                 card: elements.getElement(CardElement),
 
@@ -121,9 +124,8 @@ function Payment() {
                     <div className='payment__details'>
                         {/* Stripe payment integration would go here */}
                         {/* You can add a form for card details or integrate Stripe */}
-                        <form onClick={handleSubmit}>
+                        <form onSubmit={handleSubmit}>
                             <CardElement onChange={handleChange}/>
-
 
                             <div className='payment_priceContainer'>
                                 <NumericFormat 
