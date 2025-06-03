@@ -1,49 +1,97 @@
-# Amazon Clone
-
-Build payment/Checkout Page
-  - Stripe functionality
-  - Chekcout page(payment page)
-  - Cloud function to process stripe payments(serverless)
-  - firebase for real-time database( Firestore)
-  - MERN Stack
-
-## Deployment 
+# 🛍️ 011 Amazon Clone (Full Stack React + Node.js)
 https://amzaon-clone-4bb41.web.app
 
+This project is a full-stack Amazon Clone built using React, Firebase, Node.js (Cloud Functions), and Stripe. It replicates core e-commerce functionalities like product listing, basket management, user authentication, checkout, and payment processing.
+
+---
+
+## ✨ Features
+
+✅ User authentication with Firebase Authentication  
+✅ Real-time basket and order management using Firestore  
+✅ Stripe PaymentIntent API integration for secure payments  
+✅ Express backend running in Firebase Cloud Functions  
+✅ Responsive, modern UI built with React and React Router  
+✅ Deployed on Firebase Hosting
+
+---
+
+## 🏗️ Tech Stack
+
+- **Frontend**: React, React Router, Context API, Stripe.js  
+- **Backend**: Node.js, Express, Firebase Cloud Functions  
+- **Database**: Firestore  
+- **Payment**: Stripe  
+- **Hosting**: Firebase Hosting
 
 
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## 🚀 How to Run Locally
 
-## Available Scripts
+1️⃣ Clone the repository:
+```bash
+git clone https://github.com/your-username/amazon-clone.git
+cd amazon-clone
+```
 
-In the project directory, you can run:
+2️⃣ Install dependencies:
+```bash
+npm install
+```
 
-### `npm start`
+3️⃣ Configure environment variables:
+- Create a `.env` file in the root directory:
+  ```
+  REACT_APP_STRIPE_PUBLIC_KEY=your_publishable_key
+  STRIPE_SECRET_KEY=your_secret_key
+  ```
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+4️⃣ Start local development:
+```bash
+firebase emulators:start
+npm start
+```
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+---
+## Deployment 
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 📦 Deployment
 
-### `npm run build`
+To deploy frontend and backend:
+```bash
+firebase deploy
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+---
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## 🛡️ Notes
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- Stripe is used in **test mode**; no real payments are processed.  
+- Do **NOT** commit secret keys to the repository.  
+- Ensure you have Firebase CLI installed and set up with your project.
 
-### `npm run eject`
+---
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## 📸 Screenshots
 
+(Add screenshots here showing homepage, cart, checkout, payment success.)
+
+---
+
+## 👩‍💻 About
+
+This project was built by Shu Wang as part of her journey to master software development and API engineering. It highlights dynamic routing, simple data integration, and backend automation.
+
+--- 
+
+## 📫 Connect
+
+<a href="https://www.linkedin.com/in/shuwangs" target="_blank">
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" width="24" style="margin-right: 10px;" />
+</a>
+<a href="https://github.com/shuwangs" target="_blank">
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" width="24" />
+</a>
+
+---
