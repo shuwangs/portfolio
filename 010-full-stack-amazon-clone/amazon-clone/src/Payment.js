@@ -7,7 +7,9 @@ import { CardElement, useStripe, useElements } from '@stripe/react-stripe-js';
 import { NumericFormat } from 'react-number-format';
 import { getBasketTotal } from './reducer';
 import { useState } from 'react';
+import {db} from './firebase'; // Import Firestore database
 import axios from './axios'; // Import axios for HTTP requests
+import { collection, addDoc, doc, setDoc }  from "firebase/firestore";
 
 function Payment() {
     const [{ basket, user }, dispatch] = useStateValue();
@@ -41,7 +43,7 @@ function Payment() {
     }, [basket])
 
     console.log('The secret is >>>', clientSecret);
-
+    console.log('User is >>>', user);
 
     const handleSubmit = async (event) =>{
         // Stripe payment integration
@@ -54,13 +56,33 @@ function Payment() {
                 card: elements.getElement(CardElement),
 
             }
-        }).then(({ paymentIntent }) => { // PaymentIntent = payment confirmation
-            setSucceeded(true);
-            setError(null);
-            setProcessing(false);
+        });
+        // This will confirm the payment and return a payment inten
+        const paymentIntent = payload.paymentIntent;
 
-            navigate('/orders', { replace: true }); // Redirect to orders page after payment
-        }) 
+        const userId = user?.uid;
+        if (!userId) {
+        console.error("No user ID available.");
+        return;
+        }
+
+        const orderRef = doc(db, "users", user?.uid, "orders", paymentIntent.id);
+        await setDoc(orderRef, {
+            basket: basket,
+            amount: paymentIntent.amount,
+            created: paymentIntent.created
+        });
+
+        setSucceeded(true);
+        setError(null);
+        setProcessing(false);
+
+        dispatch({
+            type: 'EMPTY_BASKET' // Clear the basket after payment
+        })
+
+        navigate('/orders', { replace: true }); // Redirect to orders page after payment
+        
     }
 
     const handleChange = event => {

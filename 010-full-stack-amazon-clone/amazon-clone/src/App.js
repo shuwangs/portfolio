@@ -3,6 +3,7 @@ import Header from './Header.js';
 import Home from './Home.js';
 import Checkout from './Checkout.js';
 import Payment from './Payment.js';
+import Orders from './Orders.js';
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import Login from './Login';
 import { useEffect } from 'react';
@@ -56,6 +57,7 @@ function App() {
     <div className="app">
       {location.pathname !== "/login" && <Header />}
       <Routes>
+        <Route path = "/orders" element={<Orders />} />
         <Route path="/login" element={<Login />} />
         <Route path="/checkout" element={<Checkout />} />
         <Route path="/" element={<Home />} />
