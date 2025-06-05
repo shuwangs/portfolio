@@ -1,0 +1,18 @@
+.order {
+    padding: 40px;
+    margin: 20px 0;
+    background-color: white;
+    border:  1px solid #ccc;
+    position: relative;
+}
+.order__id {
+    position: absolute;
+    right: 20px;
+    top: 40px;;
+}
+
+.order__total {
+    font-weight: bold;
+    color: #333;
+    text-align: right;
+}
