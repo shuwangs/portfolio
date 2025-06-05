@@ -95,3 +95,9 @@ This project was built by Shu Wang as part of her journey to master software dev
 </a>
 
 ---
+
+
+## Note for me
+// Deploy only the functions.
+cd functions
+firebase deploy --only functions
