@@ -30,21 +30,27 @@ app.get("/", (request, response) => {
 });
 
 app.post("/payments/create", async (request, response) => {
-// We have a /payments/create/total in the payment.js file
-  const total = request.query.total;
-  console.log("Payment Request Received YEES!!  for this amount >>>", total);
+  const total = Number(request.query.total); // 显式转换成数字
+  console.log("Payment Request Received for this amount >>>", total);
 
-  const paymentIntent = await stripe.paymentIntents.create({
-    amount: total, // Amount in cents
-    currency: "usd", // Currency
-  });
-    // okay - Created a payment intent with Stripe
-  response.status(201).send({
-    // Send the client secret to the frontend
-    clientSecret: paymentIntent.client_secret,
-  });
+  if (!total || isNaN(total) || total < 1) {
+    return response.status(400).send({error: "Invalid total amount."});
+  }
+
+  try {
+    const paymentIntent = await stripe.paymentIntents.create({
+      amount: total,
+      currency: "usd",
+    });
+
+    response.status(201).send({
+      clientSecret: paymentIntent.client_secret,
+    });
+  } catch (err) {
+    console.error("Stripe Error:", err);
+    response.status(500).send({error: err.message});
+  }
 });
-
 // - Listen Commans
 
 

@@ -25,10 +25,10 @@ function Home() {
 
                     <Product 
                         id = "123s"
-                        title = "cute ugly shoes"
-                        price = {39.9}
-                        rating = {3}
-                        image = "https://m.media-amazon.com/images/I/713AO8fIDuL._AC_SY300_SX300_.jpg" 
+                        title = "5Pcs Flower Molds Silicone Chocolate Mold Daisy Flower Fondant Polymer Clay Resin Mold Soap Ice Cube Jello Molds for Baking and Cake Cupcake Decorating"
+                        price = {12.99}
+                        rating = {4}
+                        image = "https://m.media-amazon.com/images/I/71uP8TH18EL._AC_SX425_.jpg" 
                     />
                     
                 {/* Product */}
@@ -45,27 +45,27 @@ function Home() {
                         
                     <Product 
                         id = "123248"
-                        title = "cute ugly shoes"
+                        title = "SOJOS Retro Aviator Sunglasses for Women Men,Trendy Rectangle Womens Mens Shades Sun Glasses SJ2202"
                         price = {39.9}
                         rating = {3}
-                        image = "https://m.media-amazon.com/images/I/713AO8fIDuL._AC_SY300_SX300_.jpg" 
+                        image = "https://m.media-amazon.com/images/I/51TvnTUISOL._AC_SY395_.jpg" 
                         />
                         
                     <Product 
                         id = "1232s45"
-                        title = "cute ugly shoes"
-                        price = {39.9}
-                        rating = {3}
-                        image = "https://m.media-amazon.com/images/I/713AO8fIDuL._AC_SY300_SX300_.jpg" 
+                        title = "6Pcs Silicone Candle Molds Set for Candle Making, Yarn Ball Bubble Candle Mold, 3D Rose Silicone Mold, Cake Mold for Baking Desser, Silicone Mold for Soy Wax, Soap, DIY Scented Candle"
+                        price = {21.84}
+                        rating = {4}
+                        image = "https://m.media-amazon.com/images/I/51zrnPeoU9L._AC_SX425_.jpg" 
                         />
                 </div>      
                 <div className="home__row">
                     <Product 
                         id = "123245f"
-                        title = "cute ugly shoes"
-                        price = {39.9}
+                        title = "ZESICA Women's Summer Sleeveless Tank Tops Crewneck Tie Front Loose Flowy Ruffle Peplum Babydoll Blouses"
+                        price = {29.9}
                         rating = {3}
-                        image = "https://m.media-amazon.com/images/I/713AO8fIDuL._AC_SY300_SX300_.jpg" 
+                        image = "https://m.media-amazon.com/images/I/61VpO9jobDL._AC_SX466_.jpg" 
                         />
 
                 </div>                        

@@ -8,7 +8,7 @@ import { NumericFormat } from 'react-number-format';
 import { getBasketTotal } from './reducer';
 import { useState } from 'react';
 import {db} from './firebase'; // Import Firestore database
-import axios from './axios'; // Import axios for HTTP requests
+import axios from './axios';
 import { collection, addDoc, doc, setDoc }  from "firebase/firestore";
 
 function Payment() {
@@ -56,33 +56,28 @@ function Payment() {
                 card: elements.getElement(CardElement),
 
             }
-        });
-        // This will confirm the payment and return a payment inten
-        const paymentIntent = payload.paymentIntent;
+        }).then(({ paymentIntent }) => {
+            
+            db
+            .collection("users")
+            .doc(user?.uid)
+            .collection("orders")
+            .doc(paymentIntent.id)
+            .set({
+                basket: basket,
+                amount: paymentIntent.amount,
+                created: paymentIntent.created
+            })
+            setSucceeded(true);
+            setError(null);
+            setProcessing(false);
 
-        const userId = user?.uid;
-        if (!userId) {
-        console.error("No user ID available.");
-        return;
-        }
-
-        const orderRef = doc(db, "users", user?.uid, "orders", paymentIntent.id);
-        await setDoc(orderRef, {
-            basket: basket,
-            amount: paymentIntent.amount,
-            created: paymentIntent.created
-        });
-
-        setSucceeded(true);
-        setError(null);
-        setProcessing(false);
-
-        dispatch({
-            type: 'EMPTY_BASKET' // Clear the basket after payment
+            dispatch({
+                type: 'EMPTY_BASKET' // Clear the basket after payment
+            })
+            navigate('/orders', {replace: true}); // Redirect to orders page after payment
         })
-
-        navigate('/orders', { replace: true }); // Redirect to orders page after payment
-        
+  
     }
 
     const handleChange = event => {

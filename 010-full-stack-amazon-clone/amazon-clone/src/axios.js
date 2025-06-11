@@ -5,7 +5,7 @@ const instance = axios.create({
     baseURL: 'https://us-central1-amzaon-clone-4bb41.cloudfunctions.net/api'
     // You can add other configurations here, like headers, timeout, etc.
 
-    //'http://127.0.0.1:5001/amzaon-clone-4bb41/us-central1/api'
+    // baseURL: 'http://127.0.0.1:5001/amzaon-clone-4bb41/us-central1/api'
 });
 
 export default instance;
