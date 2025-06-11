@@ -14,7 +14,7 @@ function BannerSlider() {
   useEffect(() => {
     const interval = setInterval(() => {
       setIndex((prev) => (prev + 1) % bannerImages.length);
-    }, 5000); // 每 5 秒切换一次
+    }, 2000); // 每 5 秒切换一次
     return () => clearInterval(interval);
   }, []);
 
