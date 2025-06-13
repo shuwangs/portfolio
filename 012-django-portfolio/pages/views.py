@@ -6,6 +6,7 @@ def home(request):
 
 def about(request):
     return render(request, 'pages/about.html', {} )
+    
 def projects(request):
     return render(request, 'pages/projects.html', {} )
 

@@ -1,4 +1,41 @@
 {% extends "base.html" %}
 {% load static %}
+{% block content1 %}
+
+<!--#1a2238 #9daaf2 #ff6a3d  #f4db7d  -->
+
+<div class="row my-5">
+    <div class = "col-12 d-flex justify-content-center align-items-center">
+        <div class="circular-image-container" >
+            <img class="circular-image-logo" src = "{% static 'images/pawsonthekeyboard.png' %}" alt="Paws on the Keyboard Logo">
+        </div>
+    </div>
+
+    <div class="col-12 text-center ">
+        <h4 class="title">Hi, my name is </h4>
+        <div class="myName">
+            <h1>Shu Wang</h1>
+            <h4>and I am a software engineer.</h4>
+        </div>
+
+    </div>
+
+    <div class="col-12 text-center mt-3">
+        <a class="social_link" href="https://www.linkedin.com/in/shuuwang/" target="_blank"> 
+            <img src = "{% static 'images/linkedin-logo.png' %}" width="70" />
+        </a>
+
+        <a class="social_link" href="https://github.com/shuwangs" target="_blank"> 
+            <img src = "{% static 'images/github-logo.png' %}" width="50" />
+        </a>
+
+    </div>
+</div>
+
+
+
+{% endblock content1 %}
+
+
 
 

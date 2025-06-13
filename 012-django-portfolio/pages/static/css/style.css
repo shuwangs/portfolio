@@ -1,4 +1,40 @@
+body {
+    background-color: #1a2238;
+    color: #FFFFFF;
+}
 .navbar-nav .nav-link:hover {
     font-weight: bold !important;
-    color: #4fff4f !important;
+    color: #9daaf2 !important;
+}
+
+.circular-image-container {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 2px solid #ccc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.circular-image-logo {
+    width: 100%;
+    height: auto;
+    display: block;
+    background-color: #ccc;
+}
+.title {
+    color: #ffffff;
+    margin: 20px 0;
+    padding: 20px;
+}
+.myName {
+    color:#ff6a3d;
+    font-size: bold;
+    
+}
+.social-link {
+    overflow: hidden   ;
+
 }
