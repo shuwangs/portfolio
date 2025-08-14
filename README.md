@@ -65,7 +65,7 @@ End-to-end Streamlit app visualizing short-term weather forecasts from OpenWeath
 NLP project extracting insights from eBook text: tokenization, stopword removal, frequency analysis, word clouds.  
 **Skills**: Python, NLTK, matplotlib, wordcloud, NLP, text analysis
 
-### 🔹 [010 - Amazon Clone (Ongoing)](https://github.com/shuwangs/portfolio/tree/main/010-full-stack-amazon-clone/amazon-clone)  
+### 🔹 [010 - Amazon Clone](https://github.com/shuwangs/portfolio/tree/main/010-full-stack-amazon-clone/amazon-clone)  
 Full-stack Amazon-inspired e-commerce platform with React frontend, Firebase backend, and Stripe integration.  
 **Skills**: React, Firebase, Stripe API, full-stack development
 
